@@ -1,0 +1,721 @@
+{
+  "rasa_nlu_data": {
+    "regex_features": [
+      {
+        "name": "zipcode",
+        "pattern": "[0-9]{5}"
+      },
+      {
+        "name": "greet",
+        "pattern": "hey[^\\s]*"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "chinese",
+        "synonyms": ["Chinese", "Chines", "chines"]
+      },
+      {
+        "value": "vegetarian",
+        "synonyms": ["veggie", "vegg"]
+      },
+      {
+        "value": "hi",
+        "synonyms": ["expensive", "valued"]
+      },
+      {
+        "value": "lo",
+        "synonyms": ["cheap"]
+      }
+    ],
+    "common_examples": [
+      {
+        "text": "hey", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "howdy", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hey there",
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hello", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hi", 
+        "intent": "greet", 
+        "entities": []
+      },
+      {
+        "text": "good morning",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good evening",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "dear sir",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "yes", 
+        "intent": "affirm", 
+        "entities": []
+      }, 
+      {
+        "text": "yep", 
+        "intent": "affirm", 
+        "entities": []
+      }, 
+      {
+        "text": "yeah", 
+        "intent": "affirm", 
+        "entities": []
+      },
+      {
+        "text": "indeed",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "that's right",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "right, thank you",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "correct",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great choice",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "sounds really good",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "i'm looking for a place to eat",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "I want to grab lunch",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "I am searching for a dinner spot",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "i'm looking for a place in the north of town",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 31,
+            "end": 36,
+            "value": "north",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "show me chinese restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "show me chinese restaurants in the north",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 34,
+            "end": 39,
+            "value": "north",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "show me a mexican place in the centre", 
+        "intent": "restaurant_search", 
+        "entities": [
+          {
+            "start": 31, 
+            "end": 37, 
+            "value": "centre", 
+            "entity": "location"
+          }, 
+          {
+            "start": 10, 
+            "end": 17, 
+            "value": "mexican", 
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "i am looking for an indian spot called olaolaolaolaolaola",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "indian",
+            "entity": "cuisine"
+          }
+        ]
+      },     {
+        "text": "search for restaurants",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "anywhere in the west",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 16,
+            "end": 20,
+            "value": "west",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "anywhere near 18328",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 14,
+            "end": 19,
+            "value": "18328",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I am looking for asian fusion food",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 17,
+            "end": 29,
+            "value": "asian fusion",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I am looking a restaurant in 29432",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 29,
+            "end": 34,
+            "value": "29432",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I am looking for mexican indian fusion",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 17,
+            "end": 38,
+            "value": "mexican indian fusion",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "central indian restaurant",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "central",
+            "entity": "location"
+          },
+          {
+            "start": 8,
+            "end": 14,
+            "value": "indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "goodbye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "good bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "stop", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "end", 
+        "intent": "goodbye", 
+        "entities": []
+      },
+      {
+        "text": "farewell",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "Bye bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "have a good one",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "a cheap hotel in the north",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 2,
+            "end": 7,
+            "value": "cheap",
+            "entity": "price"
+          },
+          {
+            "start": 21,
+            "end": 26,
+            "value": "north",
+            "entity": "area"
+          }
+        ]
+      },
+      {
+        "text": "an expensive hotel in the south",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 12,
+            "value": "expensive",
+            "entity": "price"
+          },
+          {
+            "start": 26,
+            "end": 31,
+            "value": "south",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "a hotel in the downtown",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "downtown",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "in the north of town",
+        "intent": "location",
+        "entities": [
+          {
+            "start": 7,
+            "end": 12,
+            "value": "north",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "in the south of town",
+        "intent": "location",
+        "entities": [
+          {
+            "start": 7,
+            "end": 12,
+            "value": "south",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "i'm looking for the current stock price of TSLA",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "current",
+            "entity": "stock_type"
+          },
+          {
+            "start": 43,
+            "end": 47,
+            "value": "TSLA",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "i'm looking for the current stock price of Apple",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "current",
+            "entity": "stock_type"
+          },
+          {
+            "start": 43,
+            "end": 48,
+            "value": "Apple",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "i want to know the current stock price of Apple",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "current",
+            "entity": "stock_type"
+          },
+          {
+            "start": 42,
+            "end": 47,
+            "value": "Apple",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "i want to know the current stock price of TSLA",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "current",
+            "entity": "stock_type"
+          },
+          {
+            "start": 42,
+            "end": 46,
+            "value": "TSLA",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "i want to know the open price of TSLA for yesterday",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 23,
+            "value": "open",
+            "entity": "stock_type"
+          },
+          {
+            "start": 42,
+            "end": 51,
+            "value": "yesterday",
+            "entity": "date"
+          },
+          {
+            "start": 33,
+            "end": 37,
+            "value": "TSLA",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "i want to know the open price of AAPL for yesterday",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 23,
+            "value": "open",
+            "entity": "stock_type"
+          },
+          {
+            "start": 42,
+            "end": 51,
+            "value": "yesterday",
+            "entity": "date"
+          },
+          {
+            "start": 33,
+            "end": 37,
+            "value": "AAPL",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "i want to know its open price for yesterday",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 23,
+            "value": "open",
+            "entity": "stock_type"
+          },
+          {
+            "start": 34,
+            "end": 43,
+            "value": "yesterday",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "what's its close price for yesterday",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 11,
+            "end": 16,
+            "value": "close",
+            "entity": "stock_type"
+          },
+          {
+            "start": 27,
+            "end": 36,
+            "value": "yesterday",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "what's its volume for yesterday",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "volume",
+            "entity": "stock_type"
+          },
+          {
+            "start": 22,
+            "end": 31,
+            "value": "yesterday",
+            "entity": "date"
+          }
+        ]
+      },
+      {
+        "text": "what's its volume on 2018, 11, 27",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "volume",
+            "entity": "stock_type"
+          },
+          {
+            "start": 21,
+            "end": 25,
+            "value": "2018",
+            "entity": "year"
+          },
+          {
+            "start": 27,
+            "end": 29,
+            "value": "11",
+            "entity": "month"
+          },
+          {
+            "start": 31,
+            "end": 33,
+            "value": "27",
+            "entity": "day"
+          }
+        ]
+      },
+      {
+        "text": "what's its volume on 2019, 1, 17",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "volume",
+            "entity": "stock_type"
+          },
+          {
+            "start": 21,
+            "end": 25,
+            "value": "2019",
+            "entity": "year"
+          },
+          {
+            "start": 27,
+            "end": 28,
+            "value": "1",
+            "entity": "month"
+          },
+          {
+            "start": 30,
+            "end": 32,
+            "value": "17",
+            "entity": "day"
+          }
+        ]
+      },
+      {
+        "text": "i want to know the volume of AAPL on 2018, 11, 11",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "volume",
+            "entity": "stock_type"
+          },
+          {
+            "start": 37,
+            "end": 41,
+            "value": "2018",
+            "entity": "year"
+          },
+          {
+            "start": 43,
+            "end": 45,
+            "value": "11",
+            "entity": "month"
+          },
+          {
+            "start": 47,
+            "end": 49,
+            "value": "11",
+            "entity": "day"
+          },
+          {
+            "start": 29,
+            "end": 33,
+            "value": "AAPL",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "i want to know the volume of TSLA on 2018, 9, 1",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "volume",
+            "entity": "stock_type"
+          },
+          {
+            "start": 37,
+            "end": 41,
+            "value": "2018",
+            "entity": "year"
+          },
+          {
+            "start": 43,
+            "end": 44,
+            "value": "9",
+            "entity": "month"
+          },
+          {
+            "start": 46,
+            "end": 47,
+            "value": "1",
+            "entity": "day"
+          },
+          {
+            "start": 29,
+            "end": 33,
+            "value": "TSLA",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "I want a mid range hotel",
+        "intent": "",
+        "entities": []
+      }
+    ]
+  }
+}
